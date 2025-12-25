@@ -15,8 +15,9 @@ export default function Home() {
     setResult(null);
 
     try {
-      const res = await fetch(
-        `${API}/route?source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`
+      const hour = new Date().getHours();
+    const res = await fetch(
+        `${API}/route?hour=${hour}route?source=source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`
       );
       const data = await res.json();
       setResult(data);
