@@ -17,7 +17,7 @@ export default function Home() {
     try {
       const hour = new Date().getHours();
     const res = await fetch(
-        `${API}/route?hour=${hour}route?source=source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`
+        `${API}/route?source=${source}/route?hour=${hour}route?source=source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`destination=${destination}/route?hour=${hour}route?source=source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}`hour=${new Date().getHours()}`
       );
       const data = await res.json();
       setResult(data);
@@ -39,14 +39,14 @@ export default function Home() {
           className="text-black bg-white w-full border p-2 rounded mb-3"
           placeholder="Source"
           value={source}
-          onChange={(e) => setSource(e.target.value)}
+          onChange={(e) => setSource((e.target.value)}
         />
 
         <input
           className="text-black bg-white w-full border p-2 rounded mb-3"
           placeholder="Destination"
           value={destination}
-          onChange={(e) => setDestination(e.target.value)}
+          onChange={(e) => setDestination((e.target.value)}
         />
 
         <button
