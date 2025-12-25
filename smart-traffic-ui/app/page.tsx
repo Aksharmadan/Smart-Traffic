@@ -28,7 +28,7 @@ export default function Page() {
         )}&destination=${encodeURIComponent(destination)}`
       );
 
-      const data = await res.json();
+      if (!res.ok) throw new Error("API failed"); const data = await res.json();
       setResult(data);
     } catch (e) {
       setError("Backend not reachable");
