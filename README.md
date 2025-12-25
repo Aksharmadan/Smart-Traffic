@@ -44,4 +44,5 @@ Response:
 - Real-time traffic feeds
 
 ## 👨‍💻 Author
-Akshar Madan B.Tech
+Akshar Madan  
+ B.Tech
