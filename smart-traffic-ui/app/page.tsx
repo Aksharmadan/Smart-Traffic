@@ -18,7 +18,6 @@ export default function Home() {
       const hour = new Date().getHours();
       const hour = new Date().getHours();
       const res = await fetch(`${API}/route?source=${encodeURIComponent(source)}&destination=${encodeURIComponent(destination)}&hour=${hour}`);
-      );
       const data = await res.json();
       setResult(data);
     } catch (e) {
@@ -39,14 +38,14 @@ export default function Home() {
           className="text-black bg-white w-full border p-2 rounded mb-3"
           placeholder="Source"
           value={source}
-          onChange={(e) => setSource((e.target.value)}
+          onChange={(e) => setSource(e.target.value)}
         />
 
         <input
           className="text-black bg-white w-full border p-2 rounded mb-3"
           placeholder="Destination"
           value={destination}
-          onChange={(e) => setDestination((e.target.value)}
+          onChange={(e) => setDestination(e.target.value)}
         />
 
         <button
@@ -64,5 +63,4 @@ export default function Home() {
         )}
       </div>
     </main>
-  );
 }
